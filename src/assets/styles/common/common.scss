@@ -186,6 +186,7 @@
 .height--full-viewport {
 	height: $full-viewport-height;
 }
+
 .height--fit-content {
 	height: fit-content !important;
 }
@@ -1338,4 +1339,91 @@
 .error {
 	color: getColor($red, 200);
 	@include marginTop(10px);
+}
+/* Sidebar
+------------------------------------------------------------------------------*/
+
+.navbar-default {
+	.navbar-static-side {
+		width: 70px;
+		transition: all 0.3s ease-in-out;
+		overflow: hidden;
+		background-color: #212423;
+
+		.nav-link {
+			border-left: 2px solid transparent;
+			transition: all 0.3s linear;
+			padding: 10px 0;
+
+			.nav-link-content {
+				height: 40px;
+				background-color: transparent;
+				border-radius: 50px 0 0 50px;
+				transition: all 0.3s ease-in-out;
+
+				svg {
+					padding: 10px 12px 10px 20px;
+
+					path {
+						transition: fill 0.3s ease-in-out;
+					}
+				}
+
+				.menu-label {
+					color: #88949d;
+				}
+			}
+
+			&:hover,
+			&:active {
+				border-left: 2px solid grey;
+
+				.nav-link-content {
+					background-color: rgb(66, 63, 63);
+
+					svg {
+						path {
+							fill: grey;
+						}
+					}
+
+					.menu-label {
+						color: grey;
+					}
+				}
+			}
+		}
+
+		.active-menu {
+			border-left: 2px solid grey;
+
+			.nav-link-content {
+				background-color: rgb(66, 63, 63);
+
+				svg {
+					path {
+						fill: grey;
+					}
+				}
+
+				.menu-label {
+					color: grey;
+				}
+			}
+		}
+
+		&.collapsed {
+			width: 160px;
+
+			.nav-link {
+				.menu-label {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.collapse-icon {
+		margin: 10px 10px 10px 15px;
+	}
 }
