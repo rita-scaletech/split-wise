@@ -1,4 +1,4 @@
-import { Dashboard } from 'shared/components/icons/icons';
+import { Dashboard, Group } from 'shared/components/icons/icons';
 import { ISideNavOpt } from 'shared/components/navigation/nav.interface';
 
 const FIRST_LEVEL_BREADCRUMBS = [{ name: 'home', link: '/' }];
@@ -12,7 +12,12 @@ const SIDE_NAV_OPTIONS: ISideNavOpt[] = [
 	{
 		SvgIcon: Dashboard,
 		urlLink: '',
-		title: 'Home'
+		title: 'Dashboard'
+	},
+	{
+		SvgIcon: Group,
+		urlLink: '/group',
+		title: 'Group'
 	}
 ];
 

@@ -1,0 +1,21 @@
+.dashboard-wrapper {
+	margin: 50px;
+	.button-wrapper {
+		.add-btn {
+			width: 200px;
+			height: 80px;
+			border-radius: 15px;
+			color: $white;
+			font-size: 18px;
+			font-weight: 500;
+		}
+
+		.expenses-btn {
+			background-color: #268971;
+			margin-right: 30px;
+		}
+		.settle-btn {
+			background-color: #bc6742;
+		}
+	}
+}

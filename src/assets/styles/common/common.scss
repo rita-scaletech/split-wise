@@ -1350,6 +1350,13 @@
 		overflow: hidden;
 		background-color: #212423;
 
+		.logo-image {
+			display: block;
+			height: 60px;
+			width: 60px;
+			margin: 10px 0;
+		}
+
 		.nav-link {
 			border-left: 2px solid transparent;
 			transition: all 0.3s linear;
@@ -1361,8 +1368,12 @@
 				border-radius: 50px 0 0 50px;
 				transition: all 0.3s ease-in-out;
 
+				.svg-icon {
+					width: 68px;
+				}
+
 				svg {
-					padding: 10px 12px 10px 20px;
+					padding: 10px 20px;
 
 					path {
 						transition: fill 0.3s ease-in-out;
@@ -1376,44 +1387,44 @@
 
 			&:hover,
 			&:active {
-				border-left: 2px solid grey;
+				border-left: 2px solid #30a484;
 
 				.nav-link-content {
 					background-color: rgb(66, 63, 63);
 
 					svg {
 						path {
-							fill: grey;
+							fill: #30a484;
 						}
 					}
 
 					.menu-label {
-						color: grey;
+						color: #30a484;
 					}
 				}
 			}
 		}
 
 		.active-menu {
-			border-left: 2px solid grey;
+			border-left: 2px solid #30a484;
 
 			.nav-link-content {
 				background-color: rgb(66, 63, 63);
 
 				svg {
 					path {
-						fill: grey;
+						fill: #30a484;
 					}
 				}
 
 				.menu-label {
-					color: grey;
+					color: #30a484;
 				}
 			}
 		}
 
 		&.collapsed {
-			width: 160px;
+			width: 175px;
 
 			.nav-link {
 				.menu-label {
@@ -1424,6 +1435,6 @@
 	}
 
 	.collapse-icon {
-		margin: 10px 10px 10px 15px;
+		margin: 30px 10px 10px 15px;
 	}
 }

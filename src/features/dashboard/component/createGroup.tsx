@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 
-const CreateGroupForm = () => {
+const CreateGroupForm: FC = () => {
 	const [groupName, setGroupName] = useState('');
 	const [members, setMembers] = useState<any>([]);
 
@@ -28,7 +28,7 @@ const CreateGroupForm = () => {
 	};
 
 	return (
-		<div>
+		<div className='create-group-wrapper'>
 			<h2>Create Group</h2>
 			<form>
 				<label>
