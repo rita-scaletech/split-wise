@@ -29,7 +29,7 @@ const SideNav = () => {
 								key={index}
 								className={`nav-link ${activeMenu === urlLink && 'active-menu'}`}
 							>
-								<div className='nav-link-content flex full--width align-items--center bg--twilight-blue '>
+								<div className='nav-link-content flex width--full align-items--center bg--twilight-blue '>
 									<div className='svg-icon'>{<SvgIcon />}</div>
 									<p className='menu-label font-size--lg d--none no-margin'>{title}</p>
 								</div>

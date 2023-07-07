@@ -1,5 +1,7 @@
 import { ThunkDispatch } from 'redux-thunk';
 import _ from 'lodash';
+import moment from 'moment';
+
 import { IAction, IState } from 'shared/interface/state';
 
 /**
@@ -49,10 +51,25 @@ export const debounce = (func: any, wait = 400) => {
 		h = setTimeout(() => func(...args), wait);
 	};
 };
+
 export const generateColor = () => {
 	const x = Math.floor(Math.random() * 256);
 	const y = Math.floor(Math.random() * 256);
 	const z = Math.floor(Math.random() * 256);
 	const RGBColor = `${x} ,${y}, ${z}`;
 	return RGBColor;
+};
+
+/**
+ * function which returns formatted date
+ * @param date
+ */
+export const formatDate = (date: any, format?: string) => {
+	if (!date) {
+		return '';
+	}
+
+	return moment(date)
+		.local()
+		.format(format || 'YYYY-MM-DD HH:mm:ss');
 };

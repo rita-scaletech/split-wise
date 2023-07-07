@@ -1177,6 +1177,10 @@
 	color: $primary;
 }
 
+.text--yellow {
+	color: $yellow;
+}
+
 .text--white {
 	color: $white;
 	&.with-opacity-50 {
@@ -1188,15 +1192,15 @@
 }
 
 .text--grey {
-	@include getShadesColorClasses($grey, 'color');
+	color: #828282;
 }
 
 .text--red {
-	@include getShadesColorClasses($red, 'color');
+	color: #ff0000;
 }
 
 .text--success {
-	@include getShadesColorClasses($success, 'color');
+	color: #059669;
 }
 
 .text--blue {
