@@ -8,7 +8,7 @@ import { SideNavIcon } from '../icons/icons';
 import Logo from 'assets/images/logo.png';
 
 const SideNav = () => {
-	const [sidebarOpen, setSideBarOpen] = useState(true);
+	const [sidebarOpen, setSideBarOpen] = useState(false);
 	const location = useLocation();
 	const activeMenu = location.pathname.split('/')[1];
 

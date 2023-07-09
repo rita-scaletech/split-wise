@@ -1,9 +1,12 @@
 import { ChangeEvent, FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Field, Formik } from 'formik';
-import { ReactSelect } from 'shared/form/reactSelect';
-import { IValuesProps } from '../interface/dashboard';
+
 import { REACT_SELECT_STYLE } from 'shared/constants/reactSelect';
+import { ReactSelect } from 'shared/form/reactSelect';
+
 import { ADD_EXPENSES_FIELD, ADD_EXPENSES_REACT_SELECT, GROUP_MEMBER_INFO } from '../constants/dashboardConstant';
+import { IValuesProps } from '../interface/dashboard';
 
 const initialValues = {
 	title: '',
@@ -18,6 +21,7 @@ interface IExpenseProps {
 }
 
 const ExpenseForm: FC<IExpenseProps> = ({ handleClose }) => {
+	const navigate = useNavigate();
 	localStorage.setItem('groupMembers', JSON.stringify(GROUP_MEMBER_INFO));
 
 	const handleFormSubmit = (values: IValuesProps) => {
@@ -26,11 +30,12 @@ const ExpenseForm: FC<IExpenseProps> = ({ handleClose }) => {
 
 		const expensesDataString = localStorage.getItem('expenses');
 		const expensesData = expensesDataString ? JSON.parse(expensesDataString) : [];
-
-		expensesData.push(values);
+		const settleUpData = { ...values, settleUp: false };
+		expensesData.push(settleUpData);
 
 		localStorage.setItem('expenses', JSON.stringify(expensesData));
 		handleClose();
+		navigate('/expenses');
 	};
 
 	const handleChange = (selectedOption: IValuesProps[], setFieldValue: any) => {
@@ -40,7 +45,6 @@ const ExpenseForm: FC<IExpenseProps> = ({ handleClose }) => {
 				selectedVal.push(obj.label);
 			});
 		setFieldValue('payees', selectedVal);
-		console.log('selectedVal', selectedVal);
 	};
 
 	return (
@@ -89,10 +93,12 @@ const ExpenseForm: FC<IExpenseProps> = ({ handleClose }) => {
 					))}
 
 					<div className='mt--30'>
-						<button className='mr--10' onClick={handleClose}>
+						<button className='common-btn cancel-btn mr--10' onClick={handleClose}>
 							Cancel
 						</button>
-						<button type='submit'>Add Expense</button>
+						<button className='common-btn add-btn' type='submit'>
+							Add Expense
+						</button>
 					</div>
 				</form>
 			)}

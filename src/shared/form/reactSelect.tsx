@@ -54,7 +54,6 @@ const ReactSelect: FC<Record<string, any>> = (props) => {
 			isSearchable={isSearchable ? true : false}
 			isMulti={isMulti ? true : false}
 			isDisabled={isDisabled}
-			// menuIsOpen={true}
 		/>
 	);
 };

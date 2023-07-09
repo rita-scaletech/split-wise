@@ -18,22 +18,80 @@
 			background-color: #bc6742;
 		}
 	}
+}
 
-	.expenses-wrapper {
-		.expenses-list {
-			.expense-details {
-				padding: 0 20px;
-				background-color: #36383e;
-				height: 60px;
-				width: calc(100% - 40px);
+.expenses-wrapper {
+	.expenses-list {
+		.expense-details {
+			padding: 0 20px;
+			background-color: #212223;
+			height: 60px;
+			width: calc(100% - 40px);
+			border-radius: 10px;
 
-				.wallet-img {
-					width: 50px;
-					height: 50px;
-				}
+			.wallet-img {
+				width: 50px;
+				height: 50px;
+			}
+
+			.money-img {
+				width: 30px;
+				height: 30px;
 			}
 		}
 	}
+}
+
+.expense-details-wrapper {
+	.payees-detail {
+		color: grey;
+	}
+
+	.status-wrapper {
+		height: 20px;
+		width: auto;
+		padding: 0 5px;
+
+		border-radius: 30px;
+		@extend .display-flex-center;
+	}
+
+	.status-pay {
+		background: rgba(90, 255, 100, 0.1);
+		border: 1px solid yellow;
+		color: yellow;
+	}
+
+	.status-paid {
+		background: rgba(90, 216, 185, 0.1);
+		border: 1px solid #62c2c4;
+		color: #62c2c4;
+	}
+}
+
+.settle-animation {
+	top: 0;
+	left: 0;
+}
+
+.settle-btn {
+	background-color: #de8200;
+}
+
+.add-btn {
+	background-color: #35a69b;
+}
+
+.cancel-btn {
+	background-color: #b84c4b;
+}
+
+.common-btn {
+	height: 30px;
+	width: auto;
+	border-radius: 4px;
+	color: $white;
+	padding: 5px 10px;
 }
 
 .add-expense-form-wrapper {
@@ -56,7 +114,7 @@
 		@extend .display-flex-center;
 
 		.modal-content {
-			background-color: #444645;
+			background-color: #212223;
 			width: 100%;
 			padding: 30px;
 			border-radius: 30px;

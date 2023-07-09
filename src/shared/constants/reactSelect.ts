@@ -6,15 +6,16 @@ export const REACT_SELECT_STYLE = {
 		padding: '5px 10px',
 		borderBottom: '1px solid #e7e7e75e',
 		fontSize: '14px',
-		backgroundColor: state.isSelected ? 'rgba(255,255,255, 1);' : state.isFocused ? 'rgba(24, 25, 26, 0.2)' : '',
+		color: '#000000',
+		backgroundColor: state.isSelected ? 'rgba(255,255,255, 1)' : state.isFocused ? 'rgba(24, 25, 26, 0.2)' : '',
 		':active': {
-			backgroundColor: 'rgba(255,255,255, 1);'
+			backgroundColor: 'rgba(255,255,255, 1)'
 		},
 		':hover': {
 			backgroundColor: 'rgba(255, 255, 255, 1)'
 		},
 		':focus': {
-			backgroundColor: 'rgba(255,255,255, 1);',
+			backgroundColor: 'rgba(255,255,255, 1)',
 			outline: 0
 		}
 	}),

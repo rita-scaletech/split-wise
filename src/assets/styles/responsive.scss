@@ -1,118 +1,127 @@
-@media screen and (max-width: 1600px) {
-}
-
-@media screen and (max-width: 1440px) {
-	// Login Page
-	.login {
-		.logo-wrapper {
-			margin-bottom: 40px;
-
-			.logo_nextedgelogo {
-				max-width: 250px;
-			}
-
-			.logo_reelanalyticslogo {
-				max-width: 100px;
-			}
-		}
-
-		.form {
-			.form-item {
-				.input-field {
-					min-height: 60px;
-				}
-
-				.password-icon {
-					top: 16px;
-				}
-			}
-
-			.checkbox {
-				margin-bottom: 40px;
-			}
-
-			.login-btn {
-				min-height: 60px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 1280px) {
-}
-
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-}
-
-@media screen and (max-width: 1024px) {
-	// Login Page
-	.login {
-		.logo-wrapper {
-			margin-bottom: 30px;
-
-			.logo_nextedgelogo {
-				max-width: 200px;
-			}
-			.logo_reelanalyticslogo {
-				max-width: 80px;
-			}
-		}
-
-		.form {
-			.form-item {
-				.input-field {
-					min-height: 50px;
-				}
-
-				.password-icon {
-					top: 11px;
-				}
-			}
-
-			.checkbox {
-				margin-bottom: 35px;
-			}
-
-			.login-btn {
-				min-height: 50px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 992px) {
-	.show--lg {
-		display: none;
-	}
-
-	.hide--lg {
-		display: block;
-	}
-}
 @media screen and (max-width: 768px) {
-	.show--md {
-		display: none;
+	.dashboard-wrapper {
+		margin: 20px;
+		.button-wrapper {
+			.expenses-btn {
+				margin-right: 10px;
+			}
+
+			.add-btn {
+				width: auto;
+				height: auto;
+				padding: 20px 30px;
+			}
+		}
 	}
 
-	.hide--md {
-		display: block;
+	.expenses-wrapper {
+		h2 {
+			font-size: 30px;
+		}
+
+		.expenses-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.expense-details {
+				width: calc(48% - 20px);
+				height: auto;
+				padding: 10px;
+				flex-direction: column;
+				.expense-create-wrapper {
+					width: 100%;
+					margin-bottom: 20px;
+					justify-content: space-between;
+					.wallet-img,
+					.created-date {
+						margin-right: 0px;
+					}
+					.created-date {
+						margin-bottom: 10px;
+					}
+					.expense-info-wrapper {
+						flex-direction: column;
+						align-items: start;
+					}
+				}
+
+				.payment-details {
+					margin-right: 0;
+					.money-img {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		.settle-list {
+			.expense-details {
+				align-items: start;
+				.expense-create-wrapper {
+					flex-direction: column;
+					align-items: start;
+
+					.info-wrapper {
+						width: 100%;
+						justify-content: space-between;
+
+						.date-info-wrapper {
+							flex-direction: column;
+						}
+					}
+
+					.expense-details {
+						display: flex;
+						width: calc(100% - 20px);
+						flex-direction: row;
+						gap: 10px;
+					}
+				}
+			}
+		}
 	}
 }
 
-@media screen and (max-width: 576px) {
-	.show--sm {
-		display: none;
+@media screen and (max-width: 500px) {
+	.expenses-wrapper {
+		.expenses-list {
+			.expense-details {
+				width: calc(100% - 20px);
+
+				.expense-create-wrapper {
+					.expense-info-wrapper {
+						flex-direction: row;
+						align-items: center;
+						.created-date {
+							margin-bottom: 0;
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
 	}
 
-	.hide--sm {
-		display: block;
+	.dashboard-wrapper {
+		.button-wrapper {
+			.add-btn {
+				font-size: 14px;
+				font-weight: 400;
+				padding: 15px;
+				border-radius: 10px;
+			}
+		}
 	}
-}
-@media screen and (max-width: 425px) {
-	.show--xs {
-		display: none;
+
+	.navbar-default {
+		.navbar-static-side {
+			width: 65px;
+		}
 	}
-	.hide--xs {
-		display: block;
+
+	.expenses-wrapper {
+		h2 {
+			font-size: 25px;
+		}
 	}
 }
