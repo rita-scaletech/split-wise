@@ -53,7 +53,7 @@ const ExpenseForm: FC<IExpenseProps> = ({ handleClose }) => {
 			initialValues={initialValues}
 			onSubmit={(values: IValuesProps) => handleFormSubmit(values)}
 		>
-			{({ handleSubmit, setFieldValue, values }: any) => (
+			{({ handleSubmit, setFieldValue, values }: Record<string, any>) => (
 				<form onSubmit={handleSubmit} className='add-expense-form-wrapper'>
 					{ADD_EXPENSES_FIELD.map(({ type, placeHolder, label, name }, index: number) => (
 						<div key={index} className='flex flex--column mt--20'>

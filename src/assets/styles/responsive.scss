@@ -33,6 +33,7 @@
 					margin-bottom: 20px;
 					justify-content: space-between;
 					.wallet-img,
+					.settle-img,
 					.created-date {
 						margin-right: 0px;
 					}
@@ -70,9 +71,8 @@
 						}
 					}
 
-					.expense-details {
+					.expense-payment-details {
 						display: flex;
-						width: calc(100% - 20px);
 						flex-direction: row;
 						gap: 10px;
 					}

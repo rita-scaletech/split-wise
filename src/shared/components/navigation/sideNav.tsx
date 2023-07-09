@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import { SIDE_NAV_OPTIONS } from 'shared/constants/constants';
@@ -7,7 +7,7 @@ import { SideNavIcon } from '../icons/icons';
 
 import Logo from 'assets/images/logo.png';
 
-const SideNav = () => {
+const SideNav: FC = () => {
 	const [sidebarOpen, setSideBarOpen] = useState(false);
 	const location = useLocation();
 	const activeMenu = location.pathname.split('/')[1];

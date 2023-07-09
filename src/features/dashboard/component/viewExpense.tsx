@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import Lottie from 'react-lottie';
 
 import CustomModal from 'shared/modal/modal';
@@ -11,7 +11,6 @@ interface IProps {
 }
 
 const ViewExpense: FC<IProps> = ({ clickedIndex, handleClose }) => {
-	const [payeesStatus, setPayeesStatus] = useState([]);
 	const [isSettleUp, setIsSettleUp] = useState(false);
 	const [animation, setAnimation] = useState(false);
 

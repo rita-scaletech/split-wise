@@ -2,7 +2,7 @@ export interface IValuesProps {
 	[key: string]: string;
 }
 
-interface IDropdownProps {
+export interface IDropdownProps {
 	label: string;
 	value: string;
 }

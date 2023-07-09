@@ -1,7 +1,7 @@
-import { IValuesProps } from 'features/dashboard/interface/dashboard';
 import { FC, Fragment } from 'react';
-import { formatDate } from 'shared/util/utility';
 
+import { formatDate } from 'shared/util/utility';
+import { IValuesProps } from 'features/dashboard/interface/dashboard';
 import settleUpImage from 'assets/images/paidImage.png';
 
 const SettleUpList: FC = () => {
@@ -25,7 +25,7 @@ const SettleUpList: FC = () => {
 										>
 											<div className='expense-create-wrapper width--70 flex align-items--center'>
 												<div className='info-wrapper flex align-items--center'>
-													<div className='wallet-img mr--30'>
+													<div className='settle-img mr--30'>
 														<img
 															src={settleUpImage}
 															alt='settle-img'
@@ -48,7 +48,7 @@ const SettleUpList: FC = () => {
 													</div>
 												</div>
 
-												<div className='expense-details'>
+												<div className='expense-payment-details'>
 													<p className='text--capitalize font-size--lg'>{title}</p>
 													<p>
 														<span className='font-size--lg mr--5 text--yellow'>

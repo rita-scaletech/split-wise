@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { formatDate } from 'shared/util/utility';
-import { IValuesProps } from '../interface/dashboard';
+import { FC, useState } from 'react';
 
+import { formatDate } from 'shared/util/utility';
+import CustomModal from 'shared/modal/modal';
+
+import ViewExpense from './viewExpense';
+import { IValuesProps } from '../interface/dashboard';
 import walletImg from 'assets/images/wallet.png';
 import Money from 'assets/images/money.png';
 
-import CustomModal from 'shared/modal/modal';
-import ViewExpense from './viewExpense';
-
-const Expenses = () => {
+const Expenses: FC = () => {
 	const [isViewExpense, setIsViewExpense] = useState(false);
 	const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
