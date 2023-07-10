@@ -11,7 +11,6 @@ const App: React.FC = () => {
 			<Routes>
 				<Route path='/' element={<Dashboard />} />
 				<Route path='/settle-list' element={<SettleUpList />} />
-
 				<Route path='*' element={<Navigate replace to='/' />} />
 			</Routes>
 		</Layout>
